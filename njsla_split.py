@@ -72,5 +72,5 @@ def njsla_split(pdf_object):
         print(f'{count} PDF documents were successfully created')  #--> print statement to confirm that documents were created
                 
     else:
-        print(f'There is an error, and the for loop was not excecuted.
+        print(f'There is an error, and the for loop was not excecuted.')
     
