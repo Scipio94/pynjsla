@@ -1,3 +1,5 @@
+![PyPI - Version](https://img.shields.io/pypi/v/pynjsla) ![Static Badge](https://img.shields.io/badge/python-3.10-blue) 
+
 # pynjsla
 
 Python package that splits Individualized Score Reports (ISR) PDF exports from the New Jersey Student Learning Assessment (NJSLA) into a two page PDF export and labels output by the New Jersey Student ID (SID) extracted from the PDF.
