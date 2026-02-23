@@ -1,4 +1,4 @@
-![PyPI - Version](https://img.shields.io/pypi/v/pynjsla) ![Static Badge](https://img.shields.io/badge/python-3.10-blue)
+![PyPI - Version](https://img.shields.io/pypi/v/pynjsla) ![Static Badge](https://img.shields.io/badge/python-3.10-blue) [![Run tests](https://github.com/Scipio94/pynjsla/actions/workflows/tests.yml/badge.svg)](https://github.com/Scipio94/pynjsla/actions/workflows/tests.yml)
 
 # pynjsla
 
