@@ -6,18 +6,18 @@ Python package that splits Individualized Score Reports (ISR) PDF exports from t
 
 ## Installation
 
-```python
+~~~python
 pip install pynjsla
-```
+~~~
 
 ### Usage
 
-```python
+~~~python
 import pynjsla
 from pynjsla.njsla import njsla_split
 
 njsla_split('C:\Documents\Reports\NJSLA_ISR.pdf')
-```
+~~~
 
 The output will be _x_ number of exported PDFs with the output label being the ID from the NJSLA ISRs.
 
