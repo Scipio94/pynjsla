@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pynjsla"
-version = "0.1.0"
+version = "0.1.1"
 description = "Splits Individualized Score Reports (ISR) from the New Jersey Student Learning Assessment (NJSLA) PDF export into two page PDFs and labels output by the New Jersey State ID (SID) extracted from the ISR."
 readme = "README.md"
 requires-python = ">=3.10"
