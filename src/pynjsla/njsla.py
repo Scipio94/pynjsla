@@ -1,6 +1,7 @@
 import pdfplumber as pdfp
 from pypdf import PdfReader,PdfWriter
 import numpy as np
+from tqdm import tqdm
 
 def njsla_split(pdf_object):
     """
@@ -39,7 +40,7 @@ def njsla_split(pdf_object):
 
     # conditional statement - if conditional met will run for loop, if not will print error statement
     if doc_len == list_len:
-        for i, page_num in enumerate(range(0,len(reader.pages),2)): #--> creating a range of all even pages of the document
+        for i, page_num in enumerate(tqdm(range(0,len(reader.pages),2),desc = 'Splitting NJSLA ISRs')): #--> creating a range of all even pages of the document
                 writer = PdfWriter() #--> resets the writer object in each iteration of the loop
                 page_name = sid[i]  #--> returns sid based on list indexing 
                 writer.add_page(reader.pages[page_num]) #--> adding first page to PDF export
