@@ -6,7 +6,7 @@ from tqdm import tqdm
 def njsla_split(pdf_object):
     """
     Splits New Jersey Student Learning Assessments (NJSLA) Individual Student Reports (ISR)
-    into a two page pdf document based on student satte id (SID)
+    into a two page pdf document based on student state id (SID)
 
     Parameters
     ----------
@@ -40,17 +40,17 @@ def njsla_split(pdf_object):
 
     # conditional statement - if conditional met will run for loop, if not will print error statement
     if doc_len == list_len:
-        for i, page_num in enumerate(tqdm(range(0,len(reader.pages),2),desc = 'Splitting NJSLA ISRs')): #--> creating a range of all even pages of the document
-                writer = PdfWriter() #--> resets the writer object in each iteration of the loop
-                page_name = sid[i]  #--> returns sid based on list indexing 
-                writer.add_page(reader.pages[page_num]) #--> adding first page to PDF export
-                if page_num <= len(reader.pages): #--> conditional to ensure that that page num is not outside of index
-                    writer.add_page(reader.pages[page_num +1]) #--> adding second page to PDF export
-                with open(f'{page_name}.pdf','wb') as f: #--> file writing
-                        writer.write(f)
-                count += 1 #--> adding 1 to the count object after each iteration through the for loop
-        
-        print(f'{count} PDF documents were successfully created')  #--> print statement to confirm that documents were created
-
-    else:
-        print(f'There is an error, and the for loop was not excecuted.')
+        try:
+            for i, page_num in enumerate(tqdm(range(0,len(reader.pages),2),desc = 'Splitting NJSLA ISRs')): #--> creating a range of all even pages of the document
+                    writer = PdfWriter() #--> resets the writer object in each iteration of the loop
+                    page_name = sid[i]  #--> returns sid based on list indexing 
+                    writer.add_page(reader.pages[page_num]) #--> adding first page to PDF export
+                    if page_num <= len(reader.pages): #--> conditional to ensure that that page num is not outside of index
+                        writer.add_page(reader.pages[page_num +1]) #--> adding second page to PDF export
+                    with open(f'{page_name}.pdf','wb') as f: #--> file writing
+                            writer.write(f)
+                    count += 1 #--> adding 1 to the count object after each iteration through the for loop
+            print(f'{count} PDF documents were successfully created')  #--> print statement to confirm that documents were created
+        # error description
+        except Exception as e:
+            print("An exception occurred:", type(e).__name__)
