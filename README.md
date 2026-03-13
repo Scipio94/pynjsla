@@ -2,7 +2,10 @@
 
 # pynjsla
 
-Python package that splits Individualized Score Reports (ISR) PDF exports from the New Jersey Student Learning Assessment (NJSLA) into a two page PDF export and labels output by the New Jersey Student ID (SID) extracted from the PDF.
+Python package that splits Individualized Score Reports (ISR) PDF district level exports from the New Jersey Student Learning Assessment (NJSLA) into a two page PDF student level export and labels output by the New Jersey Student ID (SID) extracted from the PDF for SIS or database upload.
+
+- For single ISR file processing use the ***njsla_split*** library.
+- For batch ISR file processing use the ***njsla_batch_split*** library
 
 ## njsla_split
 
